@@ -20,6 +20,10 @@
   "homepage": "https://github.com/Caleb-Campbell/regolith-backend#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20"
   }
 }
