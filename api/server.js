@@ -1,15 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const server = express()
-const userRouter = require('./userRouter')
-const mongoose = require('mongoose')
-
-mongoose.set('strictQuery', true)
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
-const db = mongoose.connection
-db.on('error', (error) => {console.error(error)})
-db.on('open', () => {console.log('Connected to Database')})
-
+const userRouter = require('./routes/userRouter')
 server.use(express.json())
 
 server.use('/api/users', userRouter)
